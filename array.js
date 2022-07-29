@@ -20,12 +20,11 @@ for (let i = 0; i < countries.length; i++) {
     let count = countries[i].split('')
     sum.push(count.length)
     first.push(countries[i]);
-    for (let j = 0; j < 2; j++) {
+    console.log(countries[i])
+    for (let j = 0; j < 3; j++) {
         letters.push(countries[i][j]);
     }
-    // console.log(first, letters, sum)
     let concate = first.concat(letters);
     let final = concate.concat(sum);
     console.log(final);
 }
-
