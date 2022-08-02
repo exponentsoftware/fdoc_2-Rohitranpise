@@ -61,6 +61,7 @@ function hello(users) {
 hello(users);
 
 
+//add a new user to array of users
 function add(users, person, object) {
     for (let j = 0; j < 7; j++) {
         if (person == users[j].name) {
@@ -79,3 +80,17 @@ add(users, 'Rohit', {
 );
 
 console.log(users);
+
+
+//add a skill to existing user
+function addSkill(users, student, skill) {
+    for (let k = 0; k < 7; k++) {
+        if (student == users[k].name) {
+            let student = users[k]
+            student.skills.push(skill)
+        }
+    }
+    console.log(users)
+}
+
+addSkill(users, 'Thomas', 'Ractjs')
