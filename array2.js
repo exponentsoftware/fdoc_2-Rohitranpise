@@ -50,15 +50,32 @@ const users = [
 ];
 
 
+// users score above 85
 function hello(users) {
-    // let students = [];
     for (let i = 0; i < users.length; i++) {
-        // console.log(users[i].scores);
         if (users[i].scores >= 85) {
             console.log(users[i])
         }
     }
-    // console.log(users[1])
+}
+hello(users);
+
+
+function add(users, person, object) {
+    for (let j = 0; j < 7; j++) {
+        if (person == users[j].name) {
+            console.log('user cannot be added')
+        }
+    }
+    users.push(object);
 }
 
-hello(users);
+add(users, 'Rohit', {
+    name: 'Rohit',
+    scores: 90,
+    skills: ['HTM', 'CSS', 'JS'],
+    age: 24
+}
+);
+
+console.log(users);
